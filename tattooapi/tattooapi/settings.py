@@ -25,7 +25,10 @@ SECRET_KEY = 'lf4j$(q$nk$1ttg)9xptj$x9@!eg%wv+e-7mecm0xwt3#!b1nd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Application definition
@@ -124,3 +127,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'staticfiles'
